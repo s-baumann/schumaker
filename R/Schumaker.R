@@ -28,7 +28,6 @@
 
 Schumaker <- function(tt,FF, ff = "Not-Supplied", Vectorised = FALSE, Extrapolation = c("Curve", "Constant", "Linear")){
   Extrapolation = Extrapolation[1]
-  Derivative    = Derivative[1]
   if (!(Extrapolation %in% c("Constant", "Linear", "Curve"))){stop("The extrapolation parameter defines what the function returns when evaluated
                                                                       outside the domain of the interpolation data. \n Choose 'Constant' for constant
                                                                       extrapolation. This returns the value at the nearest edge of the domain. \n 'Linear'
