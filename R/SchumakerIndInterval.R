@@ -1,15 +1,12 @@
 #' SchumakerIndInterval
 #'
-#'
 #' This creates quadratic coefficients for one interval of a domain.
 #' This is an internal function that is called from the Schumaker function.
+#' @export
 #' @param z This is the y value at edges of an interval.
 #' @param s This is the slope at edges of an interval.
 #' @param Smallt This is x values at the edge of an interval.
 #' @return The location of the knot and quadratic coefficients for an interval.
-
-
-
 SchumakerIndInterval = function(z,s,Smallt){
   # The SchumakerIndInterval function takes in each interval individually
   # and returns the location of the knot as well as the quadratic coefficients in each subinterval.

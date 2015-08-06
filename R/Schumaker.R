@@ -1,6 +1,6 @@
 
 #' Create a Schumaker Spline
-#'
+#' @export
 #' @param tt A vector of x coordinates
 #' @param FF A corresponding vector of y coordinates
 #' @param ff (Optional) A corresponding vector of gradiants at the data points. If not supplied this is estimated.
