@@ -7,10 +7,6 @@
 #' @param Vectorised This is a boolean parameter. Set to TRUE if you want to be able to input vectors to the created spline. If you will only input single values set this to FALSE as it is a bit faster.
 
 #' @return A spline function for the given intervals and quadratic curves. Each function takes an x value (or vector if Vectorised = TRUE) and outputs the interpolated y value (or relevent derivative).
-#' @export
-
-
-
 ppmak = function(IntStarts, SpCoefs, Vectorised = TRUE){
   if (!(Vectorised)){
     sp = function(PointToExamine){

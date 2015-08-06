@@ -2,7 +2,6 @@
 #'
 #' This creates quadratic coefficients for one interval of a domain.
 #' This is an internal function that is called from the Schumaker function.
-#' @export
 #' @param z This is the y value at edges of an interval.
 #' @param s This is the slope at edges of an interval.
 #' @param Smallt This is x values at the edge of an interval.
