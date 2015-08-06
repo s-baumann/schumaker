@@ -1,0 +1,12 @@
+Package: schumaker
+Type: Package
+Title: Schumaker Shape-Preserving Spline
+Version: 0.1
+Date: 2015-08-05
+Author@R: person("Stuart", "Baumann", email = "Stuart.Baumann@ed.ac.uk", role = c("aut", "cre"))
+Maintainer: Stuart Baumann <Stuart.Baumann@ed.ac.uk>
+Description: This is a shape preserving spline which is guaranteed to be monotonic and concave\convex
+    if the data has these properties. It does not use any optimisation and is therefore quick and 
+    smoothly converges to a fixed point in economic dynamics problems including value function iteration.
+License: MIT
+LazyData: TRUE
