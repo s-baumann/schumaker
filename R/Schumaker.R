@@ -8,25 +8,26 @@
 #' @param Extrapolation This determines how the spline function responds when an input is recieved outside the domain of tt. The options are "Curve" which outputs the result of the point on the quadratic curve at the nearest interval, "Constant" which outputs the FF value at the end of the tt domain and "Linear" which extends the spline using the gradiant at the edge of tt.
 #'
 #' @return A list with 3 spline functions. Thee first spline is is for the input points, the second spline is the first derivative of the first spline, the third spline is the second derivative. Each function takes an x value (or vector if Vectorised = TRUE) and outputs the interpolated y value (or relevent derivative).
+#' @references Judd (1998). Numerical Methods in Economics. MIT Press
 #' @examples
-#' tt = c(0,1,2,3,4,5,6)
-#' FF = c(2,1, 0.59, 0.27, 0.25, -0.23, -0.45)
-#'
-#' SSS = Schumaker(tt,FF, Vectorised = TRUE)
+#' x = seq(1,6)
+#' y = log(x)
+
+#' SSS = Schumaker(x,y, Vectorised = TRUE)
 #' Spline   = SSS[[1]]
 #' SplineD  = SSS[[2]]
 #' Spline2D = SSS[[3]]
-#'
-#' xarray = seq(0,6,0.1)
-#' Res = Spline(xarray)
-#' Res2 = SplineD(xarray)
-#' Res3 = Spline2D(xarray)
-#'
-#' plot(xarray, Res, ylim=c(-2,5))
-#' lines(xarray, Res2, col = 2)
-#' lines(xarray, Res3, col = 3)
 
-Schumaker <- function(tt,FF, ff = "Not-Supplied", Vectorised = FALSE, Extrapolation = c("Curve", "Constant", "Linear")){
+#' xarray = seq(1,6,0.01)
+#' Result = Spline(xarray)
+#' Result2 = SplineD(xarray)
+#' Result3 = Spline2D(xarray)
+
+#' plot(xarray, Result, ylim=c(-0.5,2))
+#' lines(xarray, Result2, col = 2)
+#' lines(xarray, Result3, col = 3)
+
+Schumaker <- function(tt,FF, ff = "Not-Supplied", Vectorised = TRUE, Extrapolation = c("Curve", "Constant", "Linear")){
   Extrapolation = Extrapolation[1]
   if (!(Extrapolation %in% c("Constant", "Linear", "Curve"))){stop("The extrapolation parameter defines what the function returns when evaluated
                                                                       outside the domain of the interpolation data. \n Choose 'Constant' for constant

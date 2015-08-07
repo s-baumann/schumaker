@@ -4,7 +4,7 @@
 \alias{Schumaker}
 \title{Create a Schumaker Spline}
 \usage{
-Schumaker(tt, FF, ff = "Not-Supplied", Vectorised = FALSE,
+Schumaker(tt, FF, ff = "Not-Supplied", Vectorised = TRUE,
   Extrapolation = c("Curve", "Constant", "Linear"))
 }
 \arguments{
@@ -25,21 +25,21 @@ A list with 3 spline functions. Thee first spline is is for the input points, th
 Create a Schumaker Spline
 }
 \examples{
-tt = c(0,1,2,3,4,5,6)
-FF = c(2,1, 0.59, 0.27, 0.25, -0.23, -0.45)
-
-SSS = Schumaker(tt,FF, Vectorised = TRUE)
+x = seq(1,6)
+y = log(x)
+SSS = Schumaker(x,y, Vectorised = TRUE)
 Spline   = SSS[[1]]
 SplineD  = SSS[[2]]
 Spline2D = SSS[[3]]
-
-xarray = seq(0,6,0.1)
-Res = Spline(xarray)
-Res2 = SplineD(xarray)
-Res3 = Spline2D(xarray)
-
-plot(xarray, Res, ylim=c(-2,5))
-lines(xarray, Res2, col = 2)
-lines(xarray, Res3, col = 3)
+xarray = seq(1,6,0.01)
+Result = Spline(xarray)
+Result2 = SplineD(xarray)
+Result3 = Spline2D(xarray)
+plot(xarray, Result, ylim=c(-0.5,2))
+lines(xarray, Result2, col = 2)
+lines(xarray, Result3, col = 3)
+}
+\references{
+Judd (1998). Numerical Methods in Economics. MIT Press
 }
 
