@@ -4,13 +4,13 @@
 \alias{Schumaker}
 \title{Create a Schumaker Spline}
 \usage{
-Schumaker(tt, FF, ff = "Not-Supplied", Vectorised = TRUE,
+Schumaker(x, y, ff = "Not-Supplied", Vectorised = TRUE,
   Extrapolation = c("Curve", "Constant", "Linear"))
 }
 \arguments{
-\item{tt}{A vector of x coordinates}
+\item{x}{A vector of x coordinates}
 
-\item{FF}{A corresponding vector of y coordinates}
+\item{y}{A corresponding vector of y coordinates}
 
 \item{ff}{(Optional) A corresponding vector of gradiants at the data points. If not supplied this is estimated.}
 

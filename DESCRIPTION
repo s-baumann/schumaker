@@ -3,7 +3,7 @@ Type: Package
 Title: Schumaker Shape-Preserving Spline
 Version: 0.1
 Date: 2015-08-05
-Author: Stuart Baumann & Margaryta Klymak
+Author: Stuart Baumann [aut, cre], Margaryta Klymak[ctb]
 Maintainer: Stuart Baumann <Stuart.Baumann@ed.ac.uk>
 Description: This is a shape preserving spline which is guaranteed 
     to be monotonic and concave or convex if the data is monotonic 
@@ -18,3 +18,5 @@ Description: This is a shape preserving spline which is guaranteed
     determining behaviour when evaluated outside the domain.
 License: MIT + file LICENSE
 LazyData: TRUE
+Suggests: knitr, numDeriv, cobs, scam, microbenchmark
+VignetteBuilder: knitr
