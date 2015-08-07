@@ -9,9 +9,9 @@ ppmak(IntStarts, SpCoefs, Vectorised = TRUE)
 \arguments{
 \item{IntStarts}{This is a vector with the start of each interval}
 
-\item{Vectorised}{This is a boolean parameter. Set to TRUE if you want to be able to input vectors to the created spline. If you will only input single values set this to FALSE as it is a bit faster.}
+\item{SpCoefs}{This is a matrix with three columns. The first is the coefficient of the squared term followed by linear term coefficients and constants.}
 
-\item{SpCoefficients}{This is a matrix with three columns. The first is the coefficient of the squared term followed by linear term coefficients and constants.}
+\item{Vectorised}{This is a boolean parameter. Set to TRUE if you want to be able to input vectors to the created spline. If you will only input single values set this to FALSE as it is a bit faster.}
 }
 \value{
 A spline function for the given intervals and quadratic curves. Each function takes an x value (or vector if Vectorised = TRUE) and outputs the interpolated y value (or relevent derivative).
