@@ -19,7 +19,7 @@ Finally the speed of this spline in comparison with other splines is described.
 ## The schumaker spline and base splines
 
 We can show that the base splines are not shape preserving. Now we can plot the monotonic spline (you can experiment with the other ones for a similar result):
-```{r, fig.show='hold'}
+```{r, fig.show='hold', fig.width=8, fig.height=5}
 x = seq(1,10)
 y = log(x)
 
