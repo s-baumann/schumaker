@@ -16,7 +16,7 @@ Schumaker(x, y, ff = "Not-Supplied", Vectorised = TRUE,
 
 \item{Vectorised}{This is a boolean parameter. Set to TRUE if you want to be able to input vectors to the created spline. If you will only input single values set this to FALSE as it is a bit faster.}
 
-\item{Extrapolation}{This determines how the spline function responds when an input is recieved outside the domain of tt. The options are "Curve" which outputs the result of the point on the quadratic curve at the nearest interval, "Constant" which outputs the FF value at the end of the tt domain and "Linear" which extends the spline using the gradiant at the edge of tt.}
+\item{Extrapolation}{This determines how the spline function responds when an input is recieved outside the domain of x. The options are "Curve" which outputs the result of the point on the quadratic curve at the nearest interval, "Constant" which outputs the y value at the end of the x domain and "Linear" which extends the spline using the gradiant at the edge of x.}
 }
 \value{
 A list with 3 spline functions. Thee first spline is is for the input points, the second spline is the first derivative of the first spline, the third spline is the second derivative. Each function takes an x value (or vector if Vectorised = TRUE) and outputs the interpolated y value (or relevent derivative).
